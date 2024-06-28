@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Personal Finance Tracker</h1>
+        <div class="form-container">
+            <form id="transaction-form">
+                <input type="text" id="description" placeholder="Description" required>
+                <input type="number" id="amount" placeholder="Amount" required>
+                <select id="type">
+                    <option value="income">Income</option>
+                    <option value="expense">Expense</option>
+                </select>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </div>
+        <div class="summary">
+            <h2>Summary</h2>
+            <p>Total Balance: $<span id="total-balance">0.00</span></p>
+            <p>Total Income: $<span id="total-income">0.00</span></p>
+            <p>Total Expenses: $<span id="total-expense">0.00</span></p>
+        </div>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="transaction-history">
+            <h2>Transaction History</h2>
+            <ul id="transaction-list"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
